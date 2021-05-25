@@ -1,0 +1,184 @@
+<html>
+<head lang='es'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <link rel="stylesheet" type="text/css" href="dashboardMaterias.css">
+    <title>Backpack</title>
+</head>
+<body>
+    <!-- DEFINE EL CUERPO DEL DASHBOARD -->
+    <div id="panel-padding" class="container-fluid">
+        <!-- Aqui inicia el panel izquierdo -->
+        <div id="panel-lateral" class="col-md-2">
+            <div>
+                <a id="logo"class="navbar-brand" href="#">Backpack <span>&nbsp;|&nbsp;</span> Dashboard</a>
+            </div>
+            <ul class='nav navbar-nav'>
+                <li>
+                    <div class="row">
+                        <div class="col-lg-11">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">Go!</button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </div>
+                    </div>
+                </li>
+                <a href="dashboard.html"><li><span class='glyphicon glyphicon-dashboard'></span>  Newsfeed</li></a>
+                <!-- <a id='btn-dropGroup' href="#"><li><span class='glyphicon glyphicon-th-large'></span>  Grupo</li></a> -->
+                <!-- AQUI va el menu desplegable de la opcion "grupo" -->
+                <!-- <div id='dashboard-dropGroup'>
+                    <ul>
+                        <a href="#"><li>Noticias</li></a>
+                        <a href=""><li>Horario</li></a>
+                        <a href="#"><li>Equipo TLR</li></a>
+                        <a href="#"><li>Equipo Historia</li></a>
+                        <a href="#"><li>Imagenes</li></a>
+                    </ul>
+                </div> -->
+                <a href="#"><li><span class='glyphicon glyphicon-list'></span>  Materias</li></a>
+                <a href="#"><li><span class='glyphicon glyphicon-text-color'></span>  Biblioteca</li></a>
+                <!-- Opcion cambiada a menu desplegable "Plantel"<a href="#"><li><span class='glyphicon glyphicon-calendar'></span>  Calendario</li></a> -->
+                <a id='btn-dropSchool' href="#"><li><span class='glyphicon glyphicon-bullhorn'></span>  Plantel</li></a>
+                <div id='dashboard-dropSchool'>
+                    <ul>
+                        <a href="#"><li><span class='glyphicon glyphicon-calendar'></span>  Calendario</li></a>
+                        <a href="#"><li><span class='glyphicon glyphicon-signal
+                        '></span>  Metricas</li></a>
+                    </ul>
+                </div>
+                <!-- Opcion de tareas<a href="#"><li><span class='glyphicon glyphicon-edit'></span>  Tareas</li></a> --><a href="#"><li><span class='glyphicon glyphicon glyphicon-cloud'></span>  Mochila</li></a>
+                <!-- Canales o tags creados por el usuario -->
+                <div class="tags">
+                    <a href="#"><li><span class='glyphicon glyphicon-tag'></span>  Exposicion - Historia</li></a>
+
+                    <a href="#"><li><span class='glyphicon glyphicon-tag'></span> Video - TLR</li></a>
+
+                    <a href="#"><li><span class='glyphicon glyphicon-tag'></span> Equipo Rojo - Semana C.</li></a>
+
+                    <a href="#"><li><span class='glyphicon glyphicon-tag'></span> Dia de las madres</li></a>
+                </div>
+            </ul>
+        </div>  <!-- AQUI TERMINA -->
+
+        <!-- AQUI EMPIEZA LOS ELEMENTOS DEL DASHBOARD -->
+        <div class="col-xs-12 col-md-10">
+
+
+
+            <!-- Este es el newsfeed -->
+            <!-- el newsfeed esta anidado dentro de las 10 columnas y mide  columnas -->
+            <div class="newsfeed col-xs-12 col-md-9">
+                <div class="page-header-style">
+                    <h1>Materias</h1>
+                </div>
+            <!-- Este es la caja de publicaciones -->
+                
+                
+            <!-- Aqui empieza la barra lateral izquierda -->
+            <div class="col-xs-12 col-md-3 barra-izquierda">
+
+            <!-- Botones de control de sesion -->
+            <div>
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- El boton 'plus' es para crear un nuevo tag -->
+                    <li><a id="icono-newTag" href="#"><span class='glyphicon glyphicon-plus'></span></a></li>
+                    <!-- Icono de mensajes -->
+                    <li><a id='icono-mensajes' href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+                    <!-- Icono de notificaciones -->
+                    <li><a id='icono-notificaciones' href="#"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span></a></li>
+                    <!-- Icono de usuario -->
+                    <li><a id='icono-control-usuario' href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"> Santiago</span></a></li>
+                </ul>
+            </div>
+            <!-- Esto es de los botones de la barra de navegacion -->
+            <!-- Nuevo tag -->
+            <div id='nuevo-tag' >
+                <h4>Nuevo tag</h4>
+                <span class='glyphicon glyphicon-tag'></span><input type='text' name="tags">
+            </div>
+            <!-- Mensajes! -->
+                <div id="mensajes">
+                        <ul>
+                            <a href="#"><li>Carlo: ya hiciste la tarea de mate?</li></a>
+                            <a href="#"><li>Gibran: Me pasas los requisitos de historia porfa</li></a>
+                            <a href="#"><li>Xime: toma tu información</li></a>
+                            <a href="#"><li>Equipo de historia: Cuando exponemos?</li></a>
+                        </ul>
+                </div>
+                <!-- Notificaciones -->
+                <div id="notificaciones">
+                    <ul>
+                        <a href="#"><li>Nueva tarea de informatica: Opinion sobre software libre</li></a>
+                        <a href="#"><li>Calificacion de tarea en historia: 10/10</li></a>
+                        <a href="#"><li>Kim ha cerrado el grupo: "Obra de teatro TLR"</li></a>
+                        <a href="#"><li>Cambio de suspencion de clases a Lunes</li></a>
+                    </ul>
+                </div>
+                <!-- Control de usuario -->
+                <div id="control-usuario">
+                    <ul>
+                        <a href="#"><li>Ver Perfil</li></a>
+                        <a href="#"><li>Configurar Perfil</li></a>
+                        <a href="#"><li>Salir</li></a>
+                    </ul>
+                </div>
+
+
+
+            <!-- Aqui termina los mensajes, notificaciones y usuario -->
+            <!-- Panel de resumen de información del usuario -->
+            <div class="user">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img class="media-object media-img" src="https://scontent-dfw1-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/11096551_895499493841794_3823844160412978330_n.jpg?oh=d766a33378b7822b050b3430eeaabe2e&oe=55C14411"></a>
+                    </div>
+                    <div class="media-body">
+                        <h4>Santiago Sánchez</h4>
+                        <p>Promedio: 8.5 <br> Tutor: Ari <br> Materias en peligro: 2</p>
+                    </div>
+                </div>
+            </div>
+            <!-- paneol de tareas pendientes-->
+            <!-- Mide 4 columnas dentro de las 10 del dashboard-->
+            <div class="tareas">
+                <div class="panel panel-default panel-primary">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Tareas</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Diapositivas de Historia</li>
+                            <li class="list-group-item">Ensayo de TLR</li>
+                            <li class="list-group-item">Mapa conceptual de Ética y valores</li>
+                            <li class="list-group-item">Exposición de química</li>
+                            <li class="list-group-item">Poema de TLR</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div> <!-- Aqui terminan los elementes del dashboard -->
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="dashboard.js"></script>
+</body>
+</html>
